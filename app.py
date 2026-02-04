@@ -20,7 +20,7 @@ def dbs():
 @app.route("/dbsPrediction",methods=["GET","POST"])
 def dbsPrediction():
     q = float(request.form.get("q"))
-    r = model.predict([[q]])
+    r = model.predict([[1.29]])
     r = r[0][0]
     return(render_template("dbsPrediction.html", r=r))
     
